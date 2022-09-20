@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { loginUser } from '../../../_actions/user_action';
 import { useNavigate } from "react-router-dom";
 
-function LoginPage(props) {
+function LoginPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -18,9 +18,6 @@ function LoginPage(props) {
   }
   const onSubmitHandler = (event) => {
     event.preventDefault();
-
-    console.log('Email', Email);
-    console.log('Pasword', Password);
 
     let body = {
       email: Email,
